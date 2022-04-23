@@ -11,3 +11,4 @@ SİTE İÇERİĞİ
 -Şehir ile ilgili resimler de yer alacak.
 # Mirasımız Sayfası
 -Şehire ait kültürel bir mirasın olduğu sayfada bu miras ile ilgili bilgiler verilecek.
+# İlgi Alanlarım Sayfası
