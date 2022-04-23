@@ -12,3 +12,5 @@ SİTE İÇERİĞİ
 # Mirasımız Sayfası
 -Şehire ait kültürel bir mirasın olduğu sayfada bu miras ile ilgili bilgiler verilecek.
 # İlgi Alanlarım Sayfası
+-Bu sayfada ilgi alanlarım hakkında bilgiler yer alıcak.
+
