@@ -14,4 +14,8 @@ SİTE İÇERİĞİ
 # İlgi Alanlarım Sayfası
 -Bu sayfada ilgi alanlarım hakkında bilgiler yer alıcak.
 # Login sayfası
-
+-Öğrencinin numarasını ve şifresini kontrol eden bir sayfa olacak.
+# İletişim Sayfası
+-Tüm form elemanlarını içeren bir sayfa olacak.
+-Gerekli kontrol işlemleri javascript ile denetlenecek.
+-Form, temizle ve gönder butonlarını içerecek.
