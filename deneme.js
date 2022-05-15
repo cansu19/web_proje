@@ -1,48 +1,34 @@
-function validate(){
-  var name = document.getElementById("name").value;
-  var subject = document.getElementById("subject").value;
-  var email = document.getElementById("email").value;
-  var message = document.getElementById("message").value;
-  var error_message = document.getElementById("error_message");
-  var cinsiyet=  document.getElementById("cinsiyet").checked;
-  var okul=  document.getElementById("okul");
-var bolge=  document.getElementById("bolge");
-  error_message.style.padding = "10px";
-  var text;
-  if(name ==''){
-    text = "Adınızı giriniz";
-    error_message.innerHTML = text;
-    return false;
+function giris(){
+    var kullanici = document.getElementById("kullanici").value;
+    var sifre = document.getElementById("sifre").value;
+    var error_message = document.getElementById("error_message");
+    error_message.style.padding = "10px";
+    var text;
+    if(kullanici ==''){
+      text = "Adınızı giriniz";
+      error_message.innerHTML = text;
+      document.getElementById("myform").reset();
+      return false;
+    }
+    else{
+      if(kullanici.indexOf("@") == -1 || kullanici.length < 6){
+        text = "E mail adresinizi doğru formatta giriniz.";
+        error_message.innerHTML = text;
+        document.getElementById("myform").reset();
+        return false;
+      }
+    }
+    if(sifre==''){
+      text = "Şifreyi giriniz";
+      error_message.innerHTML = text;
+      document.getElementById("myform").reset();
+      return false;
+    }
+    if(sifre!= "1234"||kullanici!="g211210376@gmail.com"){
+      text = "Kullanıcı adı veya şifreden biri hatalı.";
+      error_message.innerHTML = text;
+      document.getElementById("myform").reset();
+      return false;
+    }
+    return true;
   }
-  if(subject ==''){
-    text = "Soyadınızı giriniz.";
-    error_message.innerHTML = text;
-    return false;
-  }
-  if(email.indexOf("@") == -1 || email.length < 6){
-    text = "E mail adresinizi doğru formatta giriniz.";
-    error_message.innerHTML = text;
-    return false;
-  }
-  if(cinsiyet==false){
-    text = "Cinsiyet boş.";
-    error_message.innerHTML = text;
-    return false;
-  }
-  if(okul.checked==false){
-    text = "Okul boş";
-    error_message.innerHTML = text;
-    return false;
-  }
-  if(bolge.value=="bolgeyok"){
-    text = "bolge boş";
-    error_message.innerHTML = text;
-    return false;
-  }
-  if(message==''){
-    text = "Mesajı giriniz.";
-    error_message.innerHTML = text;
-    return false;
-  }
-   return true;
-}
