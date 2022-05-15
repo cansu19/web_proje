@@ -1,72 +1,34 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
-
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
-    <link rel="stylesheet" href ="css/style.css">
-    <title>Başdeğirmen</title>
-  </head>
-  <body>
-    <nav class="navbar navbar-expand-lg arka">
-      <div class="container-fluid arka">
-        <a class="navbar-brand menu">ŞEHRİM VE BEN</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse justify-content-end fixed-top deneme2" id="navbarNav">
-          <ul class="navbar-nav">
-            <li class="nav-item">
-              <a class="nav-link active menu" aria-current="page" href="index.html">Ana Sayfa</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link menu" href="sehrim.html">Şehrim</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link menu" href="iletisim.html">İletişim</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link menu" href="mirasimiz.html">Mirasımız</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link menu" href="login.html">Login</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
-    <h1 class="text-center">BAŞDEĞİRMEN</h1>
-    <div>
-        <p class="text-center">‘Huzurun başkenti’ Karamürsel sadece ilçe halkına değil, şehir dışından gelenlere de huzur veriyor. Karamürsel’in saklı cennetlerinden Başdeğirmen Alabalık Tesisleri, özellikle hafta sonlarında ve tatillerde ‘huzur’ arayan İstanbulluların akınına uğruyor. Şehrin gürültüsünden ve keşmekeşinden uzaklaşmak, doğayla baş başa kalarak gündelik hayatın stresini ve yorgunluğunu atmak isteyen İstanbullular, soluğu Başdeğirmen Alabalık Tesisleri’nde alıyor.</p>
-    <p class="text-center"> Günübirlik gelebileceğiniz, dilerseniz konaklayabileceğiniz Başdeğirmen Alabalık Tesisleri, huzur veriyor.
-    </div>
-    <div class="row row-cols-1 row-cols-md-3 g-4">
-        <div class="col">
-          <div class="card h-100">
-            <img src="jpg/basdegirmen.jpg" class="card-img-top" alt="...">
-          </div>
-        </div>
-        <div class="col">
-          <div class="card h-100">
-            <img src="jpg/104433404_3090276154394280_4477198486709067102_o_873x640_15b.jpg" class="card-img-top" alt="...">
-          </div>
-        </div>
-        <div class="col">
-          <div class="card h-200">
-            <img src="jpg/basdegirmen-tesisler-karamursel.jpg" class="card-img-top" alt="...">
-          </div>
-        </div>
-    </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8" crossorigin="anonymous"></script>
-    <div class="arka text-light text-center ">
-      <p class= "align-middle p-3 mb-0">
-        <span>Tüm hakları saklıdır 2022</span><br>
-        <span>Designed by <b>Cansu Arslanalp</b></span><br>
-      </p>
-    </div>
-  </body>
-</html>
+function giris(){
+    var kullanici = document.getElementById("kullanici").value;
+    var sifre = document.getElementById("sifre").value;
+    var error_message = document.getElementById("error_message");
+    error_message.style.padding = "10px";
+    var text;
+    if(kullanici ==''){
+      text = "Adınızı giriniz";
+      error_message.innerHTML = text;
+      document.getElementById("myform").reset();
+      return false;
+    }
+    else{
+      if(kullanici.indexOf("@") == -1 || kullanici.length < 6){
+        text = "E mail adresinizi doğru formatta giriniz.";
+        error_message.innerHTML = text;
+        document.getElementById("myform").reset();
+        return false;
+      }
+    }
+    if(sifre==''){
+      text = "Şifreyi giriniz";
+      error_message.innerHTML = text;
+      document.getElementById("myform").reset();
+      return false;
+    }
+    if(sifre!= "1234"||kullanici!="g211210376@gmail.com"){
+      text = "Kullanıcı adı veya şifreden biri hatalı.";
+      error_message.innerHTML = text;
+      document.getElementById("myform").reset();
+      return false;
+    }
+    return true;
+  }
