@@ -10,7 +10,7 @@ Yaşadığım şehir ile ilgili bilgilerin yer aldığı sayfa olacak.
 Gezilecek yerler, nüfusu vb. bilgiler olacak.
 Şehir ile ilgili resimler de yer alacak.
 # Mirasımız Sayfası
-Şehire ait kültürel bir mirasın olduğu sayfada bu miras ile ilgili bilgiler verilecek.
+Şehire ait kültürel bir mirasın olduğu sayfada bu miras ile ilgili bilgiler verilecek, slider konulacak.
 # İlgi Alanlarım Sayfası
 Bu sayfada ilgi alanlarım hakkında bilgiler yer alıcak.
 # Login sayfası
